@@ -3,8 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- 模板中引入静态资源 -->
+    <link rel="stylesheet" href="/public/css/demo.css">
+    <script src="/public/js/demo.js"></script>
 </head>
 <body>
- i am demo template
+
+<h1>i am demo template</h1>
+
+<!-- 使用变量 -->
+<p>{{ msg }}</p>
+<p>{{arr[0]}}</p>
+<!-- 过滤器 -->
+<p>{{msg | upper}}</p>
+
+<!-- 输入html ，需要 safe 过滤器 -->
+<p>{{ h }}</p>
+<p>{{ h | safe}}</p>
+<br>
+
+<!-- if判断 -->
+{% if b %}
+    <p> b 为 true</p>
+{% else %}
+    <p> b 为 false</p>
+{% endif %}
+
+<br>
+
+
+<!-- for循环 -->
+{% for ingredient, amount in food %}
+    <p>Use {{ amount }} of {{ ingredient }}</p>
+{% endfor %}
+<br>
+
+
+<!-- 使用helper , router别名 -->
+<a href="/demo/getdemo?name=xie&age=20">跳转至 getdemo </a>
+<br>
+<a href="{{helper.urlFor('index')}}">跳转至 首页 </a>
+
+<br>
+
+<!-- 表单 POST 请求均会验证 CSRF 的值, nunjucks 会自动注入 _csrf,开发者无感开发 -->
+<form action="/demo/postdemo" method="post">
+    <p>post提交数据测试</p>
+    <input type="text" name="name">
+    <input type="number" name="age">
+    <input type="submit" value="提交">
+</form>
+
 </body>
 </html>

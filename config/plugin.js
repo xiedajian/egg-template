@@ -4,14 +4,20 @@
 // exports.static = true;
 
 
-// Validate 参数校验插件
+// Validate 参数校验插件启用
 exports.validate = {
 	enable: true,
 	package: 'egg-validate',
 };
 
-// egg-view 模板引擎
-exports.view = {
+// egg-view-nunjucks 模板引擎启用
+exports.nunjucks = {
 	enable: true,
-	package: 'egg-view',
+	package: 'egg-view-nunjucks',
 };
+
+// ORM: sequelize 插件启用
+exports.sequelize = {
+	enable: true,
+	package: 'egg-sequelize'
+}

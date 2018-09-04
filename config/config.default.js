@@ -12,7 +12,9 @@ module.exports = appInfo => {
 	// egg-view 模板引擎配置
 	config.view = {
 		mapping:{
-			'.html': 'egg-view',
+			defaultViewEngine:'nunjucks',
+			'.html': 'nunjucks',
+			defaultExtension:'.html'
 		},
 	};
 	

@@ -7,25 +7,32 @@ class DemoController extends Controller {
 	
 	// 最简单的
 	async index() {
-		console.log(this.ctx.request);
+		// 注意：ctx.body 是 ctx.response.body 的简写，不要和 ctx.request.body 混淆了
 		this.ctx.body = 'demo';
 	}
 	
 	// 返回json数据 （API）
 	async jsondemo() {
-		console.log(this.ctx.request);
-		this.ctx.body = {code: 200, data: 'demo-api-json'};
+		this.ctx.body = {result:'success', data: 'demo-api-json'};
 	}
 	
 	// 返回 view 模板
 	async viewdemo() {
-		await this.ctx.render('demo.html');;
+		let msg = 'i am msg';
+		let food = {
+			'ketchup': '5 tbsp',
+			'mustard': '1 tbsp',
+			'pickle': '0 tbsp'
+		};
+		let b = true;
+		let h = '<button onclick="btnClick()">我是按钮</button>'
+		await this.ctx.render('demo',{msg,food,b,h});;
 	}
 	
 	// get请求参数   curl：http://127.0.0.1:7001/demo/getdemo?name=xie&age=22
 	async getdemo() {
 		
-		let params = this.ctx.query;
+		let params = this.ctx.query;    // 通过 this.ctx.query 获取get参数
 		let querystring = this.ctx.querystring;
 		console.log(`原始字符串：${querystring}`)
 		this.ctx.body = params;
@@ -58,32 +65,30 @@ class DemoController extends Controller {
 	}
 	
 	
-	// post请求参数
+	// post请求参数     （挂载在 this.ctx.request.body 上）
 	async postdemo() {
-		console.log(this.ctx.request);
-		this.ctx.body = 'hi, egg222';
-		
+		var params = this.ctx.request.body;     // 包含 _csrf参数，来进行 CSRF 安全校验
+		this.ctx.body = params;
 	}
 	
 	// router路由参数   curl: http://127.0.0.1:7001/demo/routerdemo/xie
 	async routerdemo() {
-		let params = this.ctx.params;
+		let params = this.ctx.params;   // 通过this.ctx.params来获取路由参数
 		this.ctx.body = params;
-		
 	}
 	
-	// 调用 model
+	// 调用 model         （挂载在 this.ctx.model 上）
 	async modeldemo() {
 		console.log(this.ctx.request);
-		this.ctx.body = 'hi, egg222';
+		var user = await this.ctx.model.Demo.findById(1);
+		this.ctx.body = user;
 		
 	}
 	
-	// 调用自定义 service
+	// 调用自定义 service    （挂载在 this.ctx.service 上）
 	async servicedemo() {
-		console.log(this.ctx.request);
-		this.ctx.body = 'hi, egg222';
-		
+		var num = await this.ctx.service.demo.add(2,3)      // 注意 await
+		this.ctx.body = num;
 	}
 	
 	
