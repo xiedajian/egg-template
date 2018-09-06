@@ -1,19 +1,60 @@
 # egg-template
 基于node egg框架快速开发的模板
 
+技术栈： node + mysql + sequelize + eggjs
+
 
 # 集成的功能
 
 ```
+$ npm i --save lodash
 $ npm i egg-validate --save
 $ npm i egg-view-nunjucks --save
 $ npm i --save egg-sequelize
 $ npm i --save mysql2 
+$ npm i --save egg-sequelize-auto
 ```
 - egg-validate 参数校验
 - egg-view-nunjucks 模板引擎
 - 数据库ORM：egg-sequelize
+- mysql驱动
+- sequelize-auto 根据数据库表自动生成model模型
 
+
+
+# 项目运行前提
+
+1. 修改 config/config.local.js 中 sequelize 本地数据库的配置
+
+2. 运行
+
+
+## sequelize-auto 根据数据库表自动生成model模型
+
+执行 node ./bin/sequelize-auto_db2model.js
+
+
+## sequelize  根据已经建好的 model 模型同步数据库建表
+
+利用 app/model/adminUser.js 同步建立 admin_user 表
+
+
+
+## 使用 vue 前后端分离测试
+
+
+## 富文本
+
+
+## 发邮件
+
+
+## 微信授权
+
+
+## 文件上传
+
+## 发短信
 
 
 

@@ -7,8 +7,11 @@
     "egg": "^2.2.1",
     "egg-scripts": "^2.5.0",
     "egg-sequelize": "^4.1.0",
+    "egg-sequelize-auto": "^0.1.1",
     "egg-validate": "^2.0.0",
     "egg-view-nunjucks": "^2.2.0",
+    "lodash": "^4.17.10",
+    "md5": "^2.2.1",
     "mysql2": "^1.6.1"
   },
   "devDependencies": {

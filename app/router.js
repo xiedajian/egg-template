@@ -6,6 +6,8 @@
 module.exports = app => {
 	const {router, controller} = app;
 	
+	const {demo} = controller;
+	
 	// demo演示
 	router.get('index','/demo', controller.demo.index);     // 路由起别名，在view中使用
 	router.get('/demo/jsondemo', controller.demo.jsondemo);
@@ -14,8 +16,10 @@ module.exports = app => {
 	router.get('/demo/validatedemo', controller.demo.validatedemo);
 	router.post('/demo/postdemo', controller.demo.postdemo);
 	router.get('/demo/routerdemo/:name', controller.demo.routerdemo);
-	router.get('/demo/modeldemo', controller.demo.modeldemo);
-	router.get('/demo/servicedemo', controller.demo.servicedemo);
+	router.get('/demo/servicedemo', demo.servicedemo);
+	router.get('/demo/modeldemo', demo.modeldemo);
+	router.get('/demo/create_user', demo.modeldemoCreate);
+	router.get('/demo/modelSync2Db', demo.modelSync2Db);
 	
 	
 	// 前台home

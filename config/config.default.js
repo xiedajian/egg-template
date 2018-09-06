@@ -6,8 +6,8 @@ module.exports = appInfo => {
 	// use for cookie sign key, should change to your own and keep security
 	config.keys = appInfo.name + '_1536027853318_2163';
 	
-	// add your config here
-	config.middleware = ['demo'];
+	// 自定义中间件
+	config.middleware = ['demo','notfoundHandler'];
 	
 	// egg-view 模板引擎配置
 	config.view = {
@@ -17,6 +17,10 @@ module.exports = appInfo => {
 			defaultExtension:'.html'
 		},
 	};
+	
+	notfound: {
+		pageUrl: '/404.html'
+	}
 	
 	return config;
 };

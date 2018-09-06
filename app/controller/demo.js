@@ -77,20 +77,75 @@ class DemoController extends Controller {
 		this.ctx.body = params;
 	}
 	
-	// 调用 model         （挂载在 this.ctx.model 上）
-	async modeldemo() {
-		console.log(this.ctx.request);
-		var user = await this.ctx.model.Demo.findById(1);
-		this.ctx.body = user;
-		
-	}
-	
 	// 调用自定义 service    （挂载在 this.ctx.service 上）
 	async servicedemo() {
-		var num = await this.ctx.service.demo.add(2,3)      // 注意 await
+		var num = await this.service.adminUser.add(2,3)      // 注意 await
 		this.ctx.body = num;
 	}
 	
+	/*
+	* 下面展示ORM ： sequelize 的使用
+	* */
+	
+	
+	// 调用 model         （挂载在 this.ctx.model 上）
+	async modeldemo() {
+		
+		// findById
+		// var res = await this.ctx.model.AdminUser.findById(1);
+		
+		// findAll
+		// var res = await this.ctx.model.Fengge.findAll();
+		
+		// where
+		// var res = await this.ctx.model.Fengge.findAll({where:{id:5}});
+		
+		// id>2
+		// var res = await this.ctx.model.Fengge.findAll({where:{id:{$gt:2}}});
+		
+		// id>2   limit 3
+		// var res = await this.ctx.model.Fengge.findAll({where:{id:{$gt:2}},limit:3});
+		
+		//  分页  id>2    offset:2   limit:2
+		// var res = await this.ctx.model.Fengge.findAll({where:{id:{$gt:2}},offset:2,limit:2});
+		
+		// count
+		// var res = await this.ctx.model.Fengge.count();
+		
+		// findAndCountAll
+		// var res = await this.ctx.model.Fengge.findAndCountAll({where:{id:{$gt:2}}});
+		
+		// like
+		// var res = await this.ctx.model.Fengge.findAndCountAll({where:{title:{$like:'%中%'}}});
+		
+		// 新增数据
+		// var res = await this.ctx.model.Fengge.create({title:'自定义风格'});
+		
+		// 修改数据
+		// var res = await this.ctx.model.Fengge.update({paixu:7},{where:{id:1}});
+		
+		// 删除
+		// var res = await this.ctx.model.Fengge.destroy({where:{id:21}});
+		
+		var res = await this.ctx.model.Demo.create({title:'自定义风格',pic_url:'ss',url:'222'});
+		
+		this.ctx.body = res;
+		
+	}
+	
+	// 调用 model         （挂载在 this.ctx.model 上）
+	async modeldemoCreate() {
+		var user = await this.ctx.service.adminUser.create_user;
+		this.ctx.body = user;
+	}
+	
+	
+	// 利用已定义好的 model 生成数据库的表
+	async modelSync2Db(){
+		// var res = await this.ctx.model.sync();       // 同步所有表
+		var res = await this.ctx.model.Demo.sync();      // 只同步nav表
+		this.ctx.body = res;
+	}
 	
 }
 
