@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>宗保·云城管·管理平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="css/zidingyi.css" rel="stylesheet">
+    <link href="js/bootstrap-datetimepicker.min.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>发布任务 <small>*为必填项</small></h5>                        
+                    </div>
+                    
+                    <div class="ibox-content">
+                       <div class="row">
+                            <div class="col-md-8">
+								 <div class="form-group">
+								<label class="font-noraml">任务描述*</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-4">
+							   <div class="form-group">
+									<label class="font-noraml">任务编号</label>
+									<input type="text" disabled="" placeholder="PDXQ-ZPZ-20180530-001" class="form-control"> 
+								</div>
+						   </div>
+						</div>   
+                    </div>
+                    
+                    <div class="ibox-content">
+                       
+                       <div class="row">
+                            <div class="col-md-3">
+                            	<div class="form-group">
+								<label class="font-noraml">所属小区/物业</label>
+								<div class="input-group">
+									<select data-placeholder="选择所属小区/物业..." class="chosen-select" style="width:280px;" tabindex="2">
+										<option value="">请选择所属小区/物业</option>
+										<option value="110000" hassubinfo="true">12345</option>
+										<option value="120000" hassubinfo="true">12319</option>
+										<option value="130000" hassubinfo="true">来电来访</option>
+										<option value="140000" hassubinfo="true">浦东E家园</option>
+										<option value="150000" hassubinfo="true">上级交办</option>
+										<option value="210000" hassubinfo="true">媒体曝光</option>
+										<option value="220000" hassubinfo="true">执法检查</option>
+										<option value="230000" hassubinfo="true">其它途径</option>
+									</select>
+								</div>
+							</div>
+                            </div>
+                            <div class="col-md-3">
+                            	<div class="form-group">
+								<label class="font-noraml">所属集贸市场</label>
+								<div class="input-group">
+									<select data-placeholder="选择所属集贸市场..." class="chosen-select" style="width:280px;" tabindex="2">
+										<option value="">请选择所属集贸市场</option>
+										<option value="110000" hassubinfo="true">违法建筑</option>
+										<option value="120000" hassubinfo="true">损坏承重结构</option>
+										<option value="130000" hassubinfo="true">群租</option>
+										<option value="140000" hassubinfo="true">噪音油烟扰民</option>
+										<option value="150000" hassubinfo="true">损坏绿化</option>
+										<option value="210000" hassubinfo="true">光污染</option>
+										<option value="220000" hassubinfo="true">建筑工地</option>
+										<option value="230000" hassubinfo="true">违规占道</option>
+										<option value="310000" hassubinfo="true">跨门经营</option>
+										<option value="320000" hassubinfo="true">居改非</option>
+										<option value="330000" hassubinfo="true">非法营运</option>
+										
+									</select>
+								</div>
+							</div>                            	
+                            </div>
+                            <div class="col-md-3">
+                            	<div class="form-group">
+								<label class="font-noraml">所属公园/广场</label>
+								<div class="input-group">
+									<select data-placeholder="选择所属公园/广场..." class="chosen-select" style="width:280px;" tabindex="2">
+										<option value="">请选择所属公园/广场</option>
+										<option value="110000" hassubinfo="true">违法建筑</option>
+										<option value="120000" hassubinfo="true">损坏承重结构</option>
+										<option value="130000" hassubinfo="true">群租</option>
+										<option value="140000" hassubinfo="true">噪音油烟扰民</option>
+										<option value="150000" hassubinfo="true">损坏绿化</option>
+										<option value="210000" hassubinfo="true">光污染</option>
+										<option value="220000" hassubinfo="true">建筑工地</option>
+										<option value="230000" hassubinfo="true">违规占道</option>
+										<option value="310000" hassubinfo="true">跨门经营</option>
+										<option value="320000" hassubinfo="true">居改非</option>
+										<option value="330000" hassubinfo="true">非法营运</option>
+										
+									</select>
+								</div>
+							</div>                            	
+                            </div>
+                            <div class="col-md-3">
+                            	<div class="form-group">
+								<label class="font-noraml">所在道路</label>
+								<div class="input-group">
+									<select data-placeholder="选择所在道路..." class="chosen-select" style="width:280px;" tabindex="2">
+										<option value="">请选择所在道路</option>
+										<option value="110000" hassubinfo="true">违法建筑</option>
+										<option value="120000" hassubinfo="true">损坏承重结构</option>
+										<option value="130000" hassubinfo="true">群租</option>
+										<option value="140000" hassubinfo="true">噪音油烟扰民</option>
+										<option value="150000" hassubinfo="true">损坏绿化</option>
+										<option value="210000" hassubinfo="true">光污染</option>
+										<option value="220000" hassubinfo="true">建筑工地</option>
+										<option value="230000" hassubinfo="true">违规占道</option>
+										<option value="310000" hassubinfo="true">跨门经营</option>
+										<option value="320000" hassubinfo="true">居改非</option>
+										<option value="330000" hassubinfo="true">非法营运</option>
+										
+									</select>
+								</div>
+							</div>                            	
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ibox-content">
+                       
+                       <div class="row">
+                           <div class="col-md-4">
+                            	<div class="form-group">
+								<label class="font-noraml">所属店铺</label>
+								<div class="input-group">
+									<select data-placeholder="选择所属店铺..." class="chosen-select" style="width:280px;" tabindex="2">
+										<option value="">请选择所属店铺</option>
+										<option value="110000" hassubinfo="true">12345</option>
+										<option value="120000" hassubinfo="true">12319</option>
+										<option value="130000" hassubinfo="true">来电来访</option>
+										<option value="140000" hassubinfo="true">浦东E家园</option>
+										<option value="150000" hassubinfo="true">上级交办</option>
+										<option value="210000" hassubinfo="true">媒体曝光</option>
+										<option value="220000" hassubinfo="true">执法检查</option>
+										<option value="230000" hassubinfo="true">其它途径</option>
+									</select>
+								</div>
+							</div>
+                            </div>
+                            <div class="col-md-4">
+                            	<div class="form-group">
+								<label class="font-noraml">任务来源*</label>
+								<div class="input-group">
+									<select data-placeholder="选择任务来源..." class="chosen-select" style="width:280px;" tabindex="2">
+										<option value="">请选择任务来源</option>
+										<option value="110000" hassubinfo="true">12345</option>
+										<option value="120000" hassubinfo="true">12319</option>
+										<option value="130000" hassubinfo="true">来电来访</option>
+										<option value="140000" hassubinfo="true">浦东E家园</option>
+										<option value="150000" hassubinfo="true">上级交办</option>
+										<option value="210000" hassubinfo="true">媒体曝光</option>
+										<option value="220000" hassubinfo="true">执法检查</option>
+										<option value="230000" hassubinfo="true">其它途径</option>
+									</select>
+								</div>
+							</div>
+                            </div>
+                            <div class="col-md-4">
+                            	<div class="form-group">
+								<label class="font-noraml">任务分类*</label>
+								<div class="input-group">
+									<select data-placeholder="选择任务分类..." class="chosen-select" style="width:280px;" tabindex="2">
+										<option value="">请选择任务分类</option>
+										<option value="110000" hassubinfo="true">违法建筑</option>
+										<option value="120000" hassubinfo="true">损坏承重结构</option>
+										<option value="130000" hassubinfo="true">群租</option>
+										<option value="140000" hassubinfo="true">噪音油烟扰民</option>
+										<option value="150000" hassubinfo="true">损坏绿化</option>
+										<option value="210000" hassubinfo="true">光污染</option>
+										<option value="220000" hassubinfo="true">建筑工地</option>
+										<option value="230000" hassubinfo="true">违规占道</option>
+										<option value="310000" hassubinfo="true">跨门经营</option>
+										<option value="320000" hassubinfo="true">居改非</option>
+										<option value="330000" hassubinfo="true">非法营运</option>
+										
+									</select>
+								</div>
+							</div>                            	
+                            </div>
+                        </div>
+                    </div>
+                    
+                     <div class="ibox-content">
+                        <div class="form-group">
+									<label class="font-noraml">任务标签</label>
+									<div class="input-group">
+										<select data-placeholder="任务标签" class="chosen-select" multiple style="width:1604px;" tabindex="4">
+											<option value="">请选择任务标签</option>
+											<option value="110000" hassubinfo="true">紧急任务</option>
+											<option value="120000" hassubinfo="true">领导交办</option>
+											<option value="130000" hassubinfo="true">现场查看</option>
+											<option value="140000" hassubinfo="true">多去几个人</option>
+										</select>
+									</div>
+							   </div>
+                    </div>
+                    
+                    
+                    <div class="ibox-content">
+                       <div class="row">
+                            <div class="col-md-11">
+								 <div class="form-group">
+								<label class="font-noraml">发生地址*</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-1">
+							   <div class="form-group">
+									<label class="font-noraml">&nbsp;</label>
+									<button type="button" class="btn btn-w-m btn-success">地图标注</button>
+								</div>
+						   </div>
+						</div>   
+                    </div>
+                    
+                    <div class="ibox-content">
+                       <div class="row">
+                            <div class="col-md-6">
+								 <div class="form-group">
+								<label class="font-noraml">投诉人</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-6">
+							   <div class="form-group">
+									<label class="font-noraml">投诉人电话</label>
+									<input type="text" class="form-control">
+								</div>
+						   </div>
+						</div>   
+                    </div>
+                    
+                    <div class="ibox-content">
+                       <div class="row">
+                            <div class="col-md-6">
+								 <div class="form-group" id="data_1">
+									<label class="font-noraml">派单时间*</label>
+									<div class="input-group date">
+										<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										<input type="text" class="form-control" value="2018-05-16 12:23">
+									</div>
+								</div>
+						   </div>
+						   <div class="col-md-6">
+							    <div class="form-group" id="data_1">
+									<label class="font-noraml">要求完成时间*</label>
+									<div class="input-group date">
+										<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+										<input type="text" class="form-control" value="2018-05-16 18:00">
+									</div>
+								</div>
+						   </div>
+						</div>   
+                    </div>
+                    
+                    <div class="ibox-content">
+                        <div id="file-pretty">
+                            <div class="form-group">
+                                <label class="font-noraml">附件上传（多选）</label>
+                                <input type="file" multiple class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="ibox-content">
+                      <p class="font-noraml">责任人</p>
+                       <div class="row">
+							<div class="col-sm-2">
+								<div class="tack_zerenren_box">
+									<a href="profile.html">
+										<div class="col-sm-3" style="padding-left: 0px;padding-right: 0px;">
+											<div class="text-center">
+												<img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg" width="50px">
+											</div>
+										</div>
+										<div class="col-sm-7">
+											<h3><strong>何亚斌</strong><small>城管辅助</small></h3>
+											<p><i class="fa fa-map-marker"></i> 13526880588</p>
+										</div>
+										<div class="col-sm-2" style="padding-left: 0px;">
+											<div class="text-center">
+												<h1><i class="fa fa-close"></i></h1>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</a>
+								</div>
+							</div>
+							<div class="col-sm-2" style="padding-right: 15px;padding-left: 0px;">
+								<button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-plus-square"></i></button>
+								<button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-map-o"></i></button>
+							</div>
+						</div>
+                    </div>
+                    
+                   <div class="ibox-content">
+                      <p class="font-noraml">关注人</p>
+                       <div class="row">
+							<div class="col-sm-2">
+								<div class="tack_guanzhuren_box">
+									<a href="profile.html">
+										<div class="col-sm-3"  style="padding-left: 0px;padding-right: 0px;">
+											<div class="text-center">
+												<img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg" width="50px">
+											</div>
+										</div>
+										<div class="col-sm-7">
+											<h3><strong>何亚斌</strong><small>城管辅助</small></h3>
+											<p><i class="fa fa-map-marker"></i> 13526880588</p>
+										</div>
+										<div class="col-sm-2" style="padding-left: 0px;">
+											<div class="text-center">
+												<h1><i class="fa fa-close"></i></h1>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</a>
+								</div>		
+							</div>
+							
+							<div class="col-sm-2">
+								<div class="tack_guanzhuren_box">
+									<a href="profile.html">
+										<div class="col-sm-3"  style="padding-left: 0px;padding-right: 0px;">
+											<div class="text-center">
+												<img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg" width="50px">
+											</div>
+										</div>
+										<div class="col-sm-7">
+											<h3><strong>何亚斌</strong><small>城管辅助</small></h3>
+											<p><i class="fa fa-map-marker"></i> 13526880588</p>
+										</div>
+										<div class="col-sm-2" style="padding-left: 0px;">
+											<div class="text-center">
+												<h1><i class="fa fa-close"></i></h1>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</a>
+								</div>		
+							</div>
+							<div class="col-sm-2">
+								<div class="tack_guanzhuren_box">
+									<a href="profile.html">
+										<div class="col-sm-3"  style="padding-left: 0px;padding-right: 0px;">
+											<div class="text-center">
+												<img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg" width="50px">
+											</div>
+										</div>
+										<div class="col-sm-7">
+											<h3><strong>何亚斌</strong><small>城管辅助</small></h3>
+											<p><i class="fa fa-map-marker"></i> 13526880588</p>
+										</div>
+										<div class="col-sm-2" style="padding-left: 0px;">
+											<div class="text-center">
+												<h1><i class="fa fa-close"></i></h1>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</a>
+								</div>		
+							</div>
+							
+							<div class="col-sm-2">
+								<div class="tack_guanzhuren_box">
+									<a href="profile.html">
+										<div class="col-sm-3"  style="padding-left: 0px;padding-right: 0px;">
+											<div class="text-center">
+												<img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg" width="50px">
+											</div>
+										</div>
+										<div class="col-sm-7">
+											<h3><strong>何亚斌</strong><small>城管辅助</small></h3>
+											<p><i class="fa fa-map-marker"></i> 13526880588</p>
+										</div>
+										<div class="col-sm-2" style="padding-left: 0px;">
+											<div class="text-center">
+												<h1><i class="fa fa-close"></i></h1>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</a>
+								</div>		
+							</div>
+							<div class="col-sm-2">
+								<div class="tack_guanzhuren_box">
+									<a href="profile.html">
+										<div class="col-sm-3"  style="padding-left: 0px;padding-right: 0px;">
+											<div class="text-center">
+												<img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg" width="50px">
+											</div>
+										</div>
+										<div class="col-sm-7">
+											<h3><strong>何亚斌</strong><small>城管辅助</small></h3>
+											<p><i class="fa fa-map-marker"></i> 13526880588</p>
+										</div>
+										<div class="col-sm-2" style="padding-left: 0px;">
+											<div class="text-center">
+												<h1><i class="fa fa-close"></i></h1>
+											</div>
+										</div>
+										<div class="clearfix"></div>
+									</a>
+								</div>		
+							</div>
+							
+							<div class="col-sm-2">
+							    <button class="btn btn-info btn-circle btn-lg" type="button"><i class="fa fa-plus-square"></i></button>
+							</div>
+						</div>
+                    </div>
+                    
+                    <div class="ibox-content">
+                        <div class="form-group">
+									<label class="font-noraml">任务详情</label>
+									<textarea class="form-control" rows="3"></textarea>
+							   </div>
+                    </div>
+                    
+                    
+                    <div class="ibox-content">
+
+                         <a class="btn btn-primary btn-rounded btn-block" href="Task_List.html"><i class="fa fa-save"></i> 保存并发布任务</a>
+
+                    </div>
+                    
+                </div>
+                
+               
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <script src="js/plugins/prettyfile/bootstrap-prettyfile.js"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/cropper/cropper.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/demo/form-advanced-demo.min.js"></script>
+
+</body>
+
+
+</html>

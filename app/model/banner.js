@@ -6,9 +6,9 @@ module.exports = app => {
 	const Model = app.model.define('banner', {
 		id: {
 			type: DataTypes.INTEGER(10).UNSIGNED,
-			allowNull: false,           // 不允许为空
-			primaryKey: true,           // 主键
-			autoIncrement: true         // 自增长
+			allowNull: false,
+			primaryKey: true,
+			autoIncrement: true
 		},
 		title: {
 			type: DataTypes.STRING(255),
@@ -18,7 +18,11 @@ module.exports = app => {
 			type: DataTypes.STRING(255),
 			allowNull: false
 		},
-		pic_url: {
+		wapurl: {
+			type: DataTypes.STRING(255),
+			allowNull: true
+		},
+		titlepic: {
 			type: DataTypes.STRING(255),
 			allowNull: false
 		},

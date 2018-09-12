@@ -21,3 +21,9 @@ exports.sequelize = {
 	enable: true,
 	package: 'egg-sequelize'
 }
+
+// redis启用
+exports.redis = {
+	enable: true,
+	package: 'egg-redis',
+};

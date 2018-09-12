@@ -79,7 +79,7 @@ class DemoController extends Controller {
 	
 	// 调用自定义 service    （挂载在 this.ctx.service 上）
 	async servicedemo() {
-		var num = await this.service.adminUser.add(2,3)      // 注意 await
+		var num = await this.service.demo.add(2,3)      // 注意 await
 		this.ctx.body = num;
 	}
 	
@@ -127,7 +127,7 @@ class DemoController extends Controller {
 		// 删除
 		// var res = await this.ctx.model.Fengge.destroy({where:{id:21}});
 		
-		var res = await this.ctx.model.Demo.create({title:'自定义风格',pic_url:'ss',url:'222'});
+		var res = await this.ctx.model.AdminUser.create({username:'username',password:'ss',nickname:'222'});
 		
 		this.ctx.body = res;
 		

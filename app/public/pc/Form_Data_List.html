@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>宗保·云城管·管理平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    
+<!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>表单数据</h5>
+                        <div class="ibox-tools"> <a href="Form_List.html" class="btn btn-primary btn-xs">表单列表</a> </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                           <div class="col-sm-6 m-b-xs">
+                                <select class="input-sm form-control input-s-sm inline">
+                                    <option value="0">请选择表单分类</option>
+                                    <option value="1">现场勘验</option>
+                                    <option value="2">现场勘验</option>
+                                    <option value="3">现场勘验</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+
+                                        <th>ID</th>
+										<th>表单标题</th>
+                                        <th>所属表单</th>
+										<th>所属表单分类</th>
+										<th>录单人</th>
+										<th>最后修改时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>长江路128号亚星盛世嘉园51号楼7层18号群租现象</td>
+                                        <td><a href="#">群租</a></td>
+										<td><a href="#">现场勘验</a></td>
+										<td>张晓东</td>
+										<td>2017.05.11 18:54</td>
+                                        
+                                        <td>
+										<a href="Form_Design.html" class="btn btn-white btn-sm"><i class="fa fa-edit"></i> 详情 </a> 
+										<a href="Data_Dianpu_View.html" class="btn btn-white btn-sm"><i class="fa fa-database"></i> 修改 </a>
+										<a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-remove"></i> 删除 </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/demo/peity-demo.min.js"></script>
+    <script>
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+    </script>
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script> 
+<script>
+        $(document).ready(function () {
+		$(".demo4").click(function () {
+		swal({
+			title: "您确定要删除这条信息吗",
+			text: "删除后将无法恢复，请谨慎操作！",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#DD6B55",
+			confirmButtonText: "是的，我要删除！",
+			cancelButtonText: "让我再考虑一下…",
+			closeOnConfirm: false,
+			closeOnCancel: false
+		}, function (isConfirm) {
+			if (isConfirm) {
+				swal("删除成功！", "您已经永久删除了这条信息。", "success")
+			} else {
+				swal("已取消", "您取消了删除操作！", "error")
+			}
+		})
+	})
+});
+    </script>
+</body>
+
+</html>

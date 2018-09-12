@@ -22,8 +22,17 @@ module.exports = app => {
 	router.get('/demo/modelSync2Db', demo.modelSync2Db);
 	
 	
-	// 前台home
+	/**
+	 * 前台 /
+	 */
+	// 首页
 	router.get('/', controller.home.home.index);
+	// case案例
+	router.get('/case', controller.home.home.index);
+	// 文化
+	router.get('/cultrue', controller.home.home.index);
+	
+	
 	
 	// 后台admin
 	router.get('/admin', controller.admin.index.index);

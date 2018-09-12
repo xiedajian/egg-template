@@ -1,0 +1,153 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>宗保·云城管·管理平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    
+<!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>任务标签管理</h5>
+                        <div class="ibox-tools"> <a href="#" class="btn btn-primary btn-xs"  data-toggle="modal" data-target="#myModal5">添加标签</a> </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="input-group">
+                                    <input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn">
+                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+
+                                        <th>ID</th>
+                                        <th>标签名称</th>
+                                        <th>标签样式</th>
+                                        <th>排序</th>
+                                        <th>添加日期</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            1
+                                        </td>
+                                        <td>领导交办</td>
+                                        <td><button type="button" class="btn btn-w-m btn-danger">领导交办</button></td>
+                                        <td>3</td>
+                                        <td>2017.05.11</td>
+                                        <td>
+										<a href="#" class="btn btn-white btn-sm"  data-toggle="modal" data-target="#myModal5"><i class="fa fa-edit"></i> 编辑 </a> 
+										<a href="#" class="btn btn-white btn-sm demo4"><i class="fa fa-remove"></i> 删除 </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">任务标签</h4>
+            </div>
+            <div class="modal-body">
+                 <div class="row">
+                            <div class="col-md-8">
+								 <div class="form-group">
+								<label class="font-noraml">标签名称</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-4">
+							   <div class="form-group">
+									<label class="font-noraml">排序</label>
+									<input type="text" class="form-control"> 
+								</div>
+						   </div>
+						   <div class="col-md-12">
+							   <div class="form-group">
+									<label class="font-noraml">标签样式</label><br>
+									<button type="button" class="btn btn-primary">样式一</button>
+									<button type="button" class="btn btn-success">样式二</button>
+									<button type="button" class="btn btn-info">样式三</button>
+									<button type="button" class="btn btn-warning">样式四</button>
+									<button type="button" class="btn btn-danger">样式五</button>
+								</div>
+						   </div>
+						</div>   
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/demo/peity-demo.min.js"></script>
+    <script>
+        $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
+    </script>
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script> 
+<script>
+        $(document).ready(function () {
+		$(".demo4").click(function () {
+		swal({
+			title: "您确定要删除这条信息吗",
+			text: "删除后将无法恢复，请谨慎操作！",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#DD6B55",
+			confirmButtonText: "是的，我要删除！",
+			cancelButtonText: "让我再考虑一下…",
+			closeOnConfirm: false,
+			closeOnCancel: false
+		}, function (isConfirm) {
+			if (isConfirm) {
+				swal("删除成功！", "您已经永久删除了这条信息。", "success")
+			} else {
+				swal("已取消", "您取消了删除操作！", "error")
+			}
+		})
+	})
+});
+    </script>
+</body>
+
+</html>

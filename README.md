@@ -1,7 +1,8 @@
 # egg-template
-基于node egg框架快速开发的模板
 
-技术栈： node + mysql + sequelize + eggjs
+基于node egg框架搭建的博客cms
+
+技术栈： node + mysql + sequelize + redis +eggjs
 
 
 # 集成的功能
@@ -13,12 +14,14 @@ $ npm i egg-view-nunjucks --save
 $ npm i --save egg-sequelize
 $ npm i --save mysql2 
 $ npm i --save egg-sequelize-auto
+$ npm i jsonwebtoken
 ```
 - egg-validate 参数校验
 - egg-view-nunjucks 模板引擎
 - 数据库ORM：egg-sequelize
 - mysql驱动
 - sequelize-auto 根据数据库表自动生成model模型
+- JWT
 
 
 
@@ -26,7 +29,7 @@ $ npm i --save egg-sequelize-auto
 
 1. 修改 config/config.local.js 中 sequelize 本地数据库的配置
 
-2. 运行
+
 
 
 ## sequelize-auto 根据数据库表自动生成model模型

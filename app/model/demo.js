@@ -1,12 +1,12 @@
 /* indent size: 1 */
 
 module.exports = app => {
-	const { STRING, BIGINT, INTEGER, DATE, Now, TIME } = app.Sequelize;
+	const { STRING, BIGINT, INTEGER, DATE } = app.Sequelize;
 	const DataTypes = app.Sequelize;
 	
-	const DD = app.model.define('demo', {
+	const Model = app.model.define('demo', {
 		id: {
-			type: DataTypes.INTEGER(11).UNSIGNED,
+			type: DataTypes.INTEGER.UNSIGNED,
 			allowNull: false,           // 不允许为空
 			primaryKey: true,           // 主键
 			unique: true,
@@ -23,13 +23,7 @@ module.exports = app => {
 		pic_url: {
 			type: DataTypes.STRING(255),
 			allowNull: false
-		},
-		created_at: {
-			type:timestamp,
-		},
-		updated_at: {
-			type:DATE,
-		},
+		}
 	}, {
 		tableName: 'demo',   //  定义表名
 		timestamps: true,    // 自动维护时间戳 [ created_at、updated_at ]
@@ -37,5 +31,5 @@ module.exports = app => {
 		paranoid: true,     // 不从数据库中删除数据，而只是增加一个 deletedAt 标识当前时间
 	});
 	
-	return DD;
+	return Model;
 };

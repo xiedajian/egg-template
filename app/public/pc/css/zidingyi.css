@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tack_zerenren_box {
+	padding: 0px;
+	height: 50px;
+	background-color: #C1D6EB;
+	border: 1px solid #C1D6EB;
+	border-radius: 50px;
+}
+
+.tack_zerenren_box img{
+	margin-top: 0px;
+}
+
+.tack_zerenren_box a{
+	color: #3E3E3E;
+}
+
+.tack_zerenren_box h3{
+	padding-top: 1px;
+	margin-bottom: 3px;
+}
+
+
+.tack_guanzhuren_box {
+	padding: 0px;
+	height: 50px;
+	background-color: #FED05E;
+	border: 1px solid #FED05E;
+	border-radius: 50px;
+}
+
+.tack_guanzhuren_box img{
+	margin-top: 0px;
+}
+
+.tack_guanzhuren_box a{
+	color: #3E3E3E;
+}
+
+.tack_guanzhuren_box h3{
+	padding-top: 1px;
+	margin-bottom: 3px;
+}

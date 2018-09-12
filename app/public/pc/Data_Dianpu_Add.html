@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>宗保·云城管·管理平台</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="css/zidingyi.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>添加店铺 <small></small></h5>                        
+                    </div>
+                    
+                    <div class="ibox-content">
+                       <div class="row">
+                            <div class="col-md-3">
+								 <div class="form-group">
+								<label class="font-noraml">店铺名称（字号）</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						    <div class="col-md-5">
+								 <div class="form-group">
+								<label class="font-noraml">营业执照名称</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-4">
+							   <div id="file-pretty">
+									<div class="form-group">
+										<label class="font-noraml">店铺门头照片</label>
+										<input type="file" class="form-control">
+									</div>
+								</div>
+						   </div>
+						</div>
+                       <div class="row">
+                            <div class="col-md-3">
+								 <div class="form-group">
+								<label class="font-noraml">法人代表姓名</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						    <div class="col-md-3">
+								 <div class="form-group">
+								<label class="font-noraml">法人代表手机号</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-3">
+								 <div class="form-group">
+								<label class="font-noraml">法人代表身份证号码</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-3">
+							   <div id="file-pretty">
+									<div class="form-group">
+										<label class="font-noraml">法人身份证上传</label>
+										<input type="file" class="form-control">
+									</div>
+								</div>
+						   </div>
+						</div>
+                        <div class="row">
+                          <div class="col-md-3">
+								 <div class="form-group">
+								<label class="font-noraml">社会统一信用代码</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   <div class="col-md-3">
+								<div id="file-pretty">
+									<div class="form-group">
+										<label class="font-noraml">营业执照上传</label>
+										<input type="file" class="form-control">
+									</div>
+								</div>
+						   </div>
+						   <div class="col-md-4">
+								 <div class="form-group">
+								<label class="font-noraml">店铺地址</label>
+								<input type="text" class="form-control">                          
+							</div>
+						   </div>
+						   
+						   <div class="col-md-2">
+								<div class="form-group">
+									<label class="font-noraml">地图标注</label><br>
+									<a class="btn btn-w-m btn-success">地图标注</a>
+								</div>
+						   </div>
+						</div> 
+                   
+                       <div class="row">
+						   <div class="col-md-4">
+								 <div id="file-pretty">
+									<div class="form-group">
+										<label class="font-noraml">营业执照上传</label>
+										<input type="file" class="form-control">
+									</div>
+								</div>
+						   </div>
+						   <div class="col-md-4">
+								<div id="file-pretty">
+									<div class="form-group">
+										<label class="font-noraml">经营者身份证上传</label>
+										<input type="file" multiple class="form-control">
+									</div>
+								</div>
+						   </div>
+						    <div class="col-md-4">
+								<div id="file-pretty">
+									<div class="form-group">
+										<label class="font-noraml">其它证件上传</label>
+										<input type="file" multiple class="form-control">
+									</div>
+								</div>
+						   </div>
+						</div>     
+                    </div>
+                    
+                    <div class="ibox-content">
+                       
+                       <div class="row">
+                            <div class="col-md-4">
+                            	<div class="form-group">
+								<label class="font-noraml">所在道路</label>
+								<div class="input-group">
+									<select data-placeholder="选择所在道路..." class="chosen-select" style="width:360px;" tabindex="2">
+										<option value="">请选择所在道路</option>
+										<option value="110000" hassubinfo="true">嵩山路</option>
+										<option value="120000" hassubinfo="true">嵩山路</option>
+										<option value="130000" hassubinfo="true">嵩山路</option>
+										<option value="140000" hassubinfo="true">嵩山路</option>
+										<option value="150000" hassubinfo="true">嵩山路</option>
+										<option value="210000" hassubinfo="true">嵩山路</option>
+										<option value="220000" hassubinfo="true">嵩山路</option>
+										<option value="230000" hassubinfo="true">嵩山路</option>
+									</select>
+								</div>
+							</div>
+                            </div>
+                            <div class="col-md-4">
+                            	<div class="form-group">
+								<label class="font-noraml">等级划分*</label>
+								<div class="input-group">
+									<select data-placeholder="选择等级划分..." class="chosen-select" style="width:360px;" tabindex="2">
+										<option value="">请选择等级划分</option>
+										<option value="110000" hassubinfo="true">城管明星商户</option>
+										<option value="120000" hassubinfo="true">城管高危商户</option>
+										<option value="130000" hassubinfo="true">城管常违法商户</option>										
+									</select>
+								</div>
+							</div>                            	
+                            </div>
+                            <div class="col-md-4">
+                            	<div class="form-group">
+								<label class="font-noraml">行业细分*</label>
+								<div class="input-group">
+									<select data-placeholder="选择行业细分..." class="chosen-select" style="width:360px;" tabindex="2">
+										<option value="">请选择行业细分</option>
+										<option value="110000" hassubinfo="true">餐饮</option>
+										<option value="120000" hassubinfo="true">果蔬店</option>
+										<option value="130000" hassubinfo="true">打字复印社</option>										
+									</select>
+								</div>
+							</div>                            	
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="ibox-content">
+                        <div class="form-group">
+									<label class="font-noraml">店面备注</label>
+									<textarea class="form-control" rows="3"></textarea>
+							   </div>
+                    </div>
+                    
+                    <div class="ibox-content">
+
+                         <a class="btn btn-primary btn-rounded btn-block" href="Task_List.html"><i class="fa fa-save"></i> 保存并发布任务</a>
+
+                    </div>
+                    
+                </div>
+                
+               
+                
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="js/plugins/prettyfile/bootstrap-prettyfile.js"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/cropper/cropper.min.js"></script>
+    <script src="js/demo/form-advanced-demo.min.js"></script>
+</body>
+
+
+</html>

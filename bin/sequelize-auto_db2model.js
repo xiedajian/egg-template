@@ -20,7 +20,7 @@
 
 const EggSequelizeAuto = require('egg-sequelize-auto');
 
-const auto = new EggSequelizeAuto('egg_demo', 'root', 'root', {
+const auto = new EggSequelizeAuto('hushangmingjia', 'root', 'root', {
 	host: 'localhost',
 	dialect: 'mysql',           // 'mysql'|'mariadb'|'sqlite'|'postgres'|'mssql'
 	directory: '../app/model',        // 生成文件的目录
@@ -28,14 +28,17 @@ const auto = new EggSequelizeAuto('egg_demo', 'root', 'root', {
 	additional: {
 		//...
 	},
-	tables: ['user']
+	tables: ['webset','banner','links','fenlei','anli','hezuohuoban','news']
 	//...
 })
 
 // start
 auto.run(function (err) {
-	if (err) throw err;
+	
 
+	if (err) throw err;
+	console.log('=======开始======');
 	console.log(auto.tables); // table list
 	console.log(auto.foreignKeys); // foreign key list
+	console.log('=======结束======');
 });
