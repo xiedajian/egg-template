@@ -7,8 +7,9 @@ class HomeController extends Controller {
 	
 	async index() {
 		
+		this.ctx.logger.warn('==========================')
 		let banners =await this.ctx.model.Banner.findAll()
-		// console.log(banners[0]);
+		console.log(banners[0]);
 		let website =await  this.ctx.model.Webset.findAll();
 		// console.log(website);
 		console.log(typeof website);

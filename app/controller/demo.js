@@ -147,6 +147,11 @@ class DemoController extends Controller {
 		this.ctx.body = res;
 	}
 	
+	// 测试发邮件
+	async sendmail(){
+		await this.ctx.service.mail.sendActiveMail('172265972@qq.com','token','新朋友')
+		this.ctx.body = 'ok';
+	}
 }
 
 module.exports = DemoController;

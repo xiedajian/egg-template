@@ -20,6 +20,7 @@ module.exports = app => {
 	router.get('/demo/modeldemo', demo.modeldemo);
 	router.get('/demo/create_user', demo.modeldemoCreate);
 	router.get('/demo/modelSync2Db', demo.modelSync2Db);
+	router.get('/demo/sendmail', demo.sendmail);
 	
 	
 	/**
@@ -36,6 +37,7 @@ module.exports = app => {
 	
 	// 后台admin
 	router.get('/admin', controller.admin.index.index);
+	router.get('/vue_admin', controller.admin.index.vueAdmin);
 	
 	
 	// 接口API

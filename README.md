@@ -1,8 +1,16 @@
 # egg-template
 
-基于node egg框架搭建的博客cms
+基于node egg框架搭建的cms
 
-技术栈： node + mysql + sequelize + redis +eggjs
+正在建设，敬请期待
+
+技术栈： node + eggjs + mysql + sequelize + redis 
+
+前台采用后端渲染方案： jquery + bootstrap
+
+后台采用前端渲染方案： vue + vue-router + elementui
+
+小程序端采用API方案
 
 
 # 集成的功能
@@ -15,15 +23,18 @@ $ npm i --save egg-sequelize
 $ npm i --save mysql2 
 $ npm i --save egg-sequelize-auto
 $ npm i jsonwebtoken
+$ npm i egg-redis
+$ npm i nodemailer
 ```
+- lodash库
 - egg-validate 参数校验
 - egg-view-nunjucks 模板引擎
 - 数据库ORM：egg-sequelize
 - mysql驱动
 - sequelize-auto 根据数据库表自动生成model模型
 - JWT
-
-
+- redis缓存
+- nodemailer发邮件
 
 # 项目运行前提
 
@@ -45,12 +56,14 @@ $ npm i jsonwebtoken
 
 ## 使用 vue 前后端分离测试
 
+1.修改vue项目的 config/index.js 的 build 打包时以下配置
+
 
 ## 富文本
 
 
 ## 发邮件
-
+nodemailer发邮件
 
 ## 微信授权
 

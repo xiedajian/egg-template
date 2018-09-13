@@ -15,7 +15,6 @@ module.exports = appInfo => {
 	config.redis = {
 		client: {
 			port: 6379,          // Redis port
-			// host: '127.0.0.1',   // Redis host
 			host: '47.104.248.84',   // Redis host
 			password: '',
 			db: 0,
@@ -27,15 +26,24 @@ module.exports = appInfo => {
 		delegate: 'model',  // load all models to app.model and ctx.model
 		baseDir: 'model',   // load models from `app/model/*.js`
 		dialect: 'mysql',   // support: mysql, mariadb, postgres, mssql
-		// host: '127.0.0.1',
 		host: '47.104.248.84',
 		port: 3306,
 		database: 'hushangmingjia',
 		username: 'root',
-		// password: 'root',
 		password: '123456',
 	};
 	
+	// 邮箱配置
+	config.mail_opts = {
+		host: 'smtp.163.com',
+		port: 465,
+		secure: true,
+		auth: {
+			user: 'louyi_vip@163.com',
+			pass: 'louyi888',
+		},
+		ignoreTLS: true,
+	};
 	
 	
 	return config;
