@@ -6,17 +6,19 @@ module.exports = appInfo => {
 	/**
 	 * 网站站点基本设置
 	 */
-	config.name = 'CMS模板';
-	config.description = 'CMS模板学习node-egg';
-	config.keywords = 'CMS,node-egg';
+	config.name = '蝼蚁';
+	config.description = '蝼蚁CMS系统';
+	config.keywords = '蝼蚁,CMS';
 	config.site_logo = '/public/images/cnodejs_light.svg';
 	config.site_icon = '/public/images/cnode_icon_32.png';
-	config.host = 'http://cnodejs.org';
+	config.host = 'http://www.louyi.com';
 	
 	
 	// debug 为 true 时，用于本地调试
 	config.debug = true;
-	
+	// 初始化项目，用于项目首次初始化数据库表
+	config.initDB = false;
+
 	// use for cookie sign key, should change to your own and keep security
 	config.keys = appInfo.name + '_1536027853318_2163';
 	
