@@ -58,6 +58,8 @@ $ npm i nodemailer
 
 1.修改vue项目的 config/index.js 的 build 打包时以下配置
 
+## 使用 vue 后端渲染测试
+
 
 ## 富文本
 
