@@ -1,21 +1,23 @@
 
 
 
-# 项目运行前提
-
-1. 修改 config/config.local.js 中 sequelize 本地数据库的配置
-
-
-
-
 ## sequelize-auto 根据数据库表自动生成model模型
 
-执行 node ./bin/sequelize-auto_db2model.js
+执行 node ./bin/sequelize-auto_db2model.js 案例
 
 
 ## sequelize  根据已经建好的 model 模型同步数据库建表
 
-利用 app/model/adminUser.js 同步建立 admin_user 表
+可参考 app.js 的做法
+
+app.model.sync();
+
+## redis缓存数据
+
+## html静态化
+
+
+## 伪静态
 
 
 
@@ -24,13 +26,14 @@
 1.修改vue项目的 config/index.js 的 build 打包时以下配置
 
 ## 使用 vue 后端渲染测试
-
+使用 easywebpack 生成 egg + vue 多页面服务器端渲染 
 
 ## 富文本
 
 
 ## 发邮件
 nodemailer发邮件
+可参考 bin/nodemailer.js 案例
 
 ## 微信授权
 

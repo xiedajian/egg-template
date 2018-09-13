@@ -12,7 +12,7 @@ let transporter = nodemailer.createTransport({
 	secure: true, // secure:true for port 465, secure:false for port 587
 	auth: {
 		user: 'louyi_vip@163.com',
-		pass: 'louyi888' // QQ邮箱需要使用授权码
+		pass: 'xxx' // 邮箱需要使用授权码
 	}
 });
 
