@@ -2,7 +2,10 @@
 
 > 前后分离，使用 vue 来做CMS后台管理
 
-修改  config/index.js 的 build 打包时以下配置
+使用 vue + vue-router + elementUI + axios
+
+1.修改了  config/index.js 的 build 打包时配置，以生成到 egg 的目录中
+
 
 ## Build Setup
 

@@ -1,12 +1,12 @@
 <template>
   <div class="page">
-    <h2>Ecosystem</h2>
+      banner 设置页
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Banner',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
