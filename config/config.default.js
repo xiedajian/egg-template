@@ -14,7 +14,7 @@ module.exports = appInfo => {
 	config.host = 'http://www.louyi.com';
 	
 	
-	// debug 为 true 时，用于本地调试
+	// debug 为 true 时，用于本地调试，不生成 redis 缓存
 	config.debug = true;
 	// 初始化项目，用于项目首次初始化数据库表
 	config.initDB = false;

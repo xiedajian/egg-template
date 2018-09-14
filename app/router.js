@@ -9,7 +9,7 @@ module.exports = app => {
 	const {demo} = controller;
 	
 	// demo演示
-	router.get('index','/demo', controller.demo.index);     // 路由起别名，在view中使用
+	router.get('demo','/demo.html', controller.demo.index);     // 路由起别名，在view中使用
 	router.get('/demo/jsondemo', controller.demo.jsondemo);
 	router.get('/demo/viewdemo', controller.demo.viewdemo);
 	router.get('/demo/getdemo', controller.demo.getdemo);

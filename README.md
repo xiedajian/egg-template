@@ -38,10 +38,18 @@ $ npm i nodemailer
 - nodemailer发邮件
 
 
+# 新增目录结构
+
+- root/bin 存放自定义脚本
+- root/web 存放前后分离的 vue 项目
+
+
 # 运行前提
 
 1. 配置 config 中的 sequelize, redis, mail 参数
 2. 修改 config.initDB = true 利用 sequelize 同步数据库建表
+
+
 
 # 运行
 
