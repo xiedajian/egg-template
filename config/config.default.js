@@ -26,7 +26,7 @@ module.exports = appInfo => {
 	config.jwtsecret = 'xiedajian';
 	
 	// 中间件
-	config.middleware = ['demo','notfoundHandler','locals'];
+	config.middleware = ['demo','locals','notfoundHandler','errorHandler'];
 	
 	// egg-view 模板引擎配置
 	config.view = {
@@ -68,7 +68,7 @@ module.exports = appInfo => {
 	// 邮箱配置
 	config.mail_opts = {
 		host: 'smtp.163.com',
-		port: 25,
+		port: 465,
 		secure: true,
 		auth: {
 			user: 'xx@163.com',

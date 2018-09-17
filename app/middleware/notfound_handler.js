@@ -8,6 +8,7 @@
 // app/middleware/notfound_handler.js
 module.exports = () => {
 	return async function notFoundHandler(ctx, next) {
+        console.log('::::404中间件start')
 		await next();
 		if (ctx.status === 404 && !ctx.body) {
 			if (ctx.acceptJSON) {
@@ -18,5 +19,6 @@ module.exports = () => {
 				await ctx.render('404')         // 调用 app/view/404.html 作为404的响应
 			}
 		}
+        console.log('::::404中间件end')
 	};
 };

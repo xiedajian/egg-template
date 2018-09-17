@@ -14,12 +14,12 @@ module.exports = app => {
 
 		// 首次运行，初始化项目，同步数据库建表
 		if(app.config.initDB){
-            console.log('::::::::无需创建数据库');
+            console.log('::::::::创建数据库');
 			try{
                 await app.model.sync();
-                console.log('::::::::初始化项目，数据库建表成功');
+                console.log('::::::::数据库建表成功');
 			}catch (e){
-                console.log('::::::::初始化项目，数据库建表失败',e);
+                console.log('::::::::数据库建表失败',e);
 			}
         }else {
             console.log('::::::::无需同步数据库');

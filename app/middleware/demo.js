@@ -9,9 +9,10 @@
 
 module.exports = options => {
 	return async function demo(ctx, next) {
-		
+        console.log('::::请求开始')
+
 		await next();
 		
-		console.log('请求结束,执行自定义中间件demo')
+		console.log('::::请求结束')
 	}
 }
