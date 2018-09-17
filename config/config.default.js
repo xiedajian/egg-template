@@ -37,9 +37,12 @@ module.exports = appInfo => {
 		},
 	};
 	
-	// 暂时关闭 security csrf
+	// security
 	exports.security = {
-		csrf: false
+		// 暂时关闭 csrf
+		csrf: false,
+		// 白名单
+		domainWhiteList: [ 'http://127.0.0.1:7001' ],
 	};
 	
 	
@@ -76,7 +79,13 @@ module.exports = appInfo => {
 		},
 		ignoreTLS: true,
 	};
-
+	
+	exports.cors = {
+		// {string|Function} origin: '*',
+		// {string|Array} allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+		origin: '*',
+		allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+	};
 	
 	return config;
 };

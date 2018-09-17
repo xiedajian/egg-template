@@ -38,6 +38,7 @@ module.exports = app => {
 	// 后台admin
 	router.get('/admin', controller.admin.index.index);
 	router.get('/vue_admin', controller.admin.index.vueAdmin);
+	router.post('/admin/upload', controller.admin.upload.upload);
 	
 	
 	// 接口API

@@ -26,6 +26,7 @@ $ npm i --save egg-sequelize-auto
 $ npm i jsonwebtoken
 $ npm i egg-redis
 $ npm i nodemailer
+$ npm i egg-cors --save
 ```
 - lodash库
 - egg-validate 参数校验
@@ -36,7 +37,7 @@ $ npm i nodemailer
 - JWT
 - redis缓存
 - nodemailer发邮件
-
+- egg-cors 跨域
 
 # 新增目录结构
 

@@ -100,9 +100,16 @@ app.model.sync();
 
 ## 富文本
 
+采用轻量级的 wangEditor 编辑器
+
+vue + wangEditor 在实现后台文章编辑
 
 
 ## 文件上传
+
+参考 app/admin/upload.js 
+
+用到 egg-cors 设置cors
 
 
 
