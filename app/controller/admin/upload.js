@@ -18,9 +18,7 @@ const md5 = require('md5');
 class UploadController extends Controller {
 	
 	/**
-	 * 上传文件，兼容单文件和多文件
-	 * @param customName 单文件自定义文件名
-	 * @param isAjax 上传方式
+	 * 单文件上传文件
 	 */
 	async upload() {
 		const ctx = this.ctx;
@@ -58,13 +56,11 @@ class UploadController extends Controller {
 		
 	}
 	
-	async parse(req) {
-		const form = new formidable.IncomingForm();
-		return new Promise((resolve, reject) => {
-			form.parse(req, (err, fields, files) => {
-				resolve({ fields, files })
-			})
-		});
+	/**
+	 * 多文件上传
+	 */
+	async uploadMulti(req) {
+
 	}
 }
 
