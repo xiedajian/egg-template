@@ -28,7 +28,7 @@ const auto = new EggSequelizeAuto('hushangmingjia', 'root', 'root', {
 	additional: {
 		//...
 	},
-	tables: ['webset','banner','links','fenlei','anli','hezuohuoban','news']
+	tables: ['admin_users']
 	//...
 })
 

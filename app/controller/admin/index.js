@@ -5,17 +5,13 @@ const Controller = require('egg').Controller;
 
 class IndexController extends Controller {
 	
+
+	// 后台 vue 前后分离入口
 	async index() {
-		this.ctx.body = '后台首页';
-		
-		
+		await this.ctx.render('admin/admin.html')	
 	}
-	
-	// 测试vue
-	async vueAdmin() {
-		await this.ctx.render('admin/admin.html')
-		
-	}
+
+
 }
 
 module.exports = IndexController;

@@ -16,7 +16,7 @@ const md5 = require('md5');
 
 
 class UploadController extends Controller {
-	
+
 	/**
 	 * 单文件上传文件
 	 */
@@ -46,20 +46,28 @@ class UploadController extends Controller {
 		console.log(filename);
 		//文件响应
 		ctx.body = {
-			errno:'0',
-			data:[
+			errno: '0',
+			data: [
 				`${this.ctx.config.host}/public/uploads/${filename}`,
 			]
 			// url: '/public/uploads/' + filename
 		};
 
-		
+
 	}
-	
+
 	/**
 	 * 多文件上传
 	 */
-	async uploadMulti(req) {
+	async uploadMulti() {
+
+	}
+
+
+	/**
+	 * base64上传图片
+	 */
+	async uploadByBase64() {
 
 	}
 }

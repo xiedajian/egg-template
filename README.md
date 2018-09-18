@@ -27,6 +27,7 @@ $ npm i jsonwebtoken
 $ npm i egg-redis
 $ npm i nodemailer
 $ npm i egg-cors --save
+$ npm install --save svg-captcha
 ```
 - lodash库
 - egg-validate 参数校验
@@ -38,6 +39,7 @@ $ npm i egg-cors --save
 - redis缓存
 - nodemailer发邮件
 - egg-cors 跨域
+- svg-captcha 生成验证码
 
 # 新增目录结构
 

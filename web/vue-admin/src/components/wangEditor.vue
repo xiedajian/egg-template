@@ -73,8 +73,8 @@
 			this.editor.customConfig.uploadImgServer = 'http://127.0.0.1:7001/admin/upload'
 			// 将图片大小限制为 3M
 			this.editor.customConfig.uploadImgMaxSize  =  3 * 1024 * 1024
-			// 限制一次最多上传 5 张图片
-			this.editor.customConfig.uploadImgMaxLength = 5
+			// 限制一次最多上传 1 张图片
+			this.editor.customConfig.uploadImgMaxLength = 1
 			this.editor.customConfig.uploadFileName = 'yourFileName'
 
 

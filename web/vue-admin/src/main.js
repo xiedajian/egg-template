@@ -4,8 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+
+// vuex
+// import store from '@/store/index'
+
+// ElementUI
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+
+// 全屏控制
+import screenfull from 'screenfull'
 
 Vue.prototype.$axios= axios
 Vue.use(ElementUI);

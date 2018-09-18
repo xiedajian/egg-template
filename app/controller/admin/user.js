@@ -5,41 +5,70 @@ const Controller = require('egg').Controller;
 var _ = require('lodash');
 
 class UserController extends Controller {
-	
-	
-	// 登录页面
-	async login() {
-		await this.ctx.render('')
-	}
-	
+
+
 	// 登录
-	async dologin() {
-		this.ctx.body = '后台首页';
-		const username = ctx.params.username;
-		const password = ctx.params.password;
+	async login() {
+		const {ctx} = this
+		// const username = ctx.params.username;
+		// const password = ctx.params.password;
+		// const code = ctx.params.code;
+		const { username, password, code } = ctx.request.body
+
+		console.log(code);
 		
-		// 参数校验
-		
-		// 验证账号
-		let userInfo = this.ctx.service.admin_user.login(username,password)
-		
-		if(userInfo){
-			this.ctx.session()
+		let {login_code} = ctx.session // 获取session保存的验证码
+		console.log(login_code);
+		// 先校验验证码
+		if(!code ||  !login_code|| code.toLowerCase() !== login_code.toLowerCase()){
+			
+			this.ctx.body = ctx.apijson(401,'验证码错误','')	
+			return
 		}
-		
-		this.ctx.redirect('/admin/index')
-		
-		
-	}
+
+		// 验证账号
+		let res = this.ctx.service.admin_user.adminLogin(username, password)
+
+		if (res) {
+			this.ctx.body = ctx.apijson(200,'ok',res)
+		}else{
+			this.ctx.body = ctx.apijson(401,'账号或者密码错误','')
+		}
+
 	
+
+	}
+
+	// 生成验证码
+	async getCaptcha() {
+
+		const { ctx } = this
+
+		let captcha =await ctx.service.adminUser.getCaptcha()
+
+		console.log(captcha.text);
+
+		// 把生成的验证码文本信息（如：t8ec），存入session，以待验证
+		ctx.session.login_code = captcha.text
+
+		console.log(ctx.session.login_code);
+		
+		// 将生成的验证码svg图片返回给前端
+		// this.ctx.set('Content-Type', 'text/html');
+		// ctx.body = captcha.data
+		ctx.body = ctx.apijson(200,'ok',captcha.data)
+	}
+
+
+
 	// 注销
 	async logout() {
 		const { ctx } = this;
 		ctx.session = null;
 		ctx.redirect('/admin/login');
 	}
-	
-	
+
+
 }
 
 module.exports = UserController;

@@ -30,8 +30,7 @@
         <el-header>Header</el-header>
         <el-container>
 
-            <!-- 侧边栏 -->
-            <el-aside width="200px" style="background-color:#545c64">
+y            <el-aside width="200px" style="background-color:#545c64">
 
                 <!-- 手风琴菜单 -->
                 <el-menu :default-openeds="['1']" :collapse="isCollapse" unique-opened="true" router="true"
@@ -39,8 +38,8 @@
                          text-color="#fff"
                          active-text-color="#ffd04b">
 
-                    <el-submenu  v-for='(item, key, index) in routes' :index="index" :key="item.label">
-                        <template slot="title"><i class="el-icon-message"></i>{{item.label}}</template>
+                    <el-submenu  v-for='(item, key, index) in menus' :index="index" :key="item.label">
+                        <template slot="title"><i class="el-icon-message"></i>{{index}}{{item.label}}</template>
                         <el-menu-item-group>
                             <!--<template slot="title">分组一</template>-->
                             <!--<el-menu-item index="/index/banner">选项1</el-menu-item>-->
@@ -60,6 +59,7 @@
 </template>
 
 <script>
+    import menus from '../menu/menu.js'
 	export default {
 		name: 'Index',
 		data() {
@@ -67,22 +67,7 @@
 				isCollapse: false,       // 是否水平折叠手风琴菜单
 
                 // 路由列表
-				routes: [
-					{
-						label: '网站管理',
-						child: [
-							{path: '/index/news', label: '新闻管理'},
-							{path: '/index/webset', label: '站点管理'},
-						]
-					},
-					{
-						label: '插件管理',
-						child: [
-							{path: '/index/banner', label: '轮播图管理'},
-							{path: '/index/links', label: '友情链接管理'},
-						]
-					},
-				]
+				menus: menus
 			}
 		},
 

@@ -125,3 +125,7 @@ nodemailer发邮件
 ## 发短信
 
 
+## 生成验证码
+
+svg-captcha 生成二维码
+

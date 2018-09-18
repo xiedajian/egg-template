@@ -7,6 +7,14 @@
 1.修改了  config/index.js 的 build 打包时配置，以生成到 egg 的目录中
 
 
+
+# 使用依赖
+
+```
+$ npm install --save screenfull
+
+```
+
 ## Build Setup
 
 ``` bash
