@@ -40,6 +40,13 @@ app.model.sync();
 
 
 
+
+## CORS 处理跨域
+
+*ajax跨域的时候不会携带cookie，需要客户端和服务端都设置一些东西*
+
+
+
 ## redis缓存数据
 
 使用 redis, egg-redis, 配置 plugin,config

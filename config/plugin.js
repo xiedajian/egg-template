@@ -28,6 +28,7 @@ exports.redis = {
 	package: 'egg-redis',
 };
 
+// CORS跨域启用
 exports.cors = {
 	enable: true,
 	package: 'egg-cors',

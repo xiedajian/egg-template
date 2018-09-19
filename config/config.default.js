@@ -40,9 +40,21 @@ module.exports = appInfo => {
 	// security
 	exports.security = {
 		// 暂时关闭 csrf
-		csrf: false,
+		csrf: {
+			enable: false,
+			ignoreJSON: true, // 默认为 false，当设置为 true 时，将会放过所有 content-type 为 `application/json` 的请求
+		},
 		// 白名单
-		domainWhiteList: ['http://127.0.0.1:7001','http://localhost:8080'],
+		domainWhiteList: ['http://127.0.0.1:8080','http://localhost:8080'],
+	};
+
+	// CORS跨域配置
+	exports.cors = {
+		// {string|Function} origin: '*',
+		// {string|Array} allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+		// origin: '*',
+		credentials: true,
+		allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
 	};
 
 	// session配置
@@ -87,12 +99,7 @@ module.exports = appInfo => {
 		ignoreTLS: true,
 	};
 
-	exports.cors = {
-		// {string|Function} origin: '*',
-		// {string|Array} allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-		origin: '*',
-		allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-	};
+
 
 	return config;
 };

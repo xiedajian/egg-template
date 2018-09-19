@@ -45,6 +45,7 @@ module.exports = app => {
 	router.get('/admin/user/getcaptche', controller.admin.user.getCaptcha);
 	// 登录
 	router.post('/admin/login', controller.admin.user.login);
+	// 验证token
 
 	/**
 	 * API

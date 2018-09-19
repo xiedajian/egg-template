@@ -30,10 +30,14 @@ class AdminUser extends Service {
 
 		const { ctx, app } = this
 
-		const userData = await ctx.model.User.find({
-			userName: username,
-			password: password
+		const userData = await ctx.model.AdminUser.findAll({
+			where:{
+				username: username,
+				password: password
+			}
 		})
+		console.log('::::',userData.length);
+		
 
 		// 找不到则返回false
 		if (userData.length === 0) {
@@ -43,7 +47,7 @@ class AdminUser extends Service {
 		// 生成token
 		var token = null;
 		try {
-			token = ctx.service.jwt.buildToken({id:userData[0].id,isAdmin:true});
+			token =await ctx.service.jwt.buildToken({id:userData[0].id,isAdmin:true});
 		} catch (err) {
 			console.log(err);
 		}

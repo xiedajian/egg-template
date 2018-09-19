@@ -12,7 +12,6 @@ class IndexController extends Controller {
 		console.log(token);
 		var id= this.service.jwt.getUserIdFormToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImlhdCI6MTUzNjMxMzQxM30.sGslwTmJOlSgWAsMnFW1_k5nRqPLiBqCzH9UFATcEDk')
 		console.log(id);
-		this.ctx.body = {code:200,data:'api返回信息'};
 	}
 	
 	async test(){
