@@ -34,7 +34,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-louyi --port=7001 --env=prod",
+    "start": "egg-scripts start --daemon --title=egg-server-louyi --port=7001 --env=prod --workers=1",
     "stop": "egg-scripts stop --title=egg-server-louyi",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",

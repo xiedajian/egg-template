@@ -52,4 +52,5 @@ module.exports = app => {
 	 */
 	// 接口API
 	router.get('/api', controller.api.index.index);
+	router.get('/api/search/', controller.api.douyin.search);
 };

@@ -20,9 +20,7 @@
 $ npm i --save lodash
 $ npm i egg-validate --save
 $ npm i egg-view-nunjucks --save
-$ npm i --save egg-sequelize
-$ npm i --save mysql2 
-$ npm i --save egg-sequelize-auto
+$ npm i --save egg-sequelize mysql2 egg-sequelize-auto
 $ npm i jsonwebtoken
 $ npm i egg-redis
 $ npm i nodemailer
