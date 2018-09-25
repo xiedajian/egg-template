@@ -47,6 +47,9 @@ module.exports = app => {
 	router.post('/admin/login', controller.admin.user.login);
 	// 验证token
 
+	// 生成 excel 表格
+	router.get('/admin/export_excel/', controller.admin.download.downloadExcel);
+
 	/**
 	 * API
 	 */

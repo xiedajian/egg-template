@@ -1,5 +1,10 @@
 
 
+/**
+ * 生成验证码
+ * 使用 svg-captche 库
+ */
+
 
 const Service = require('egg').Service;
 const svgCaptcha = require('svg-captcha')

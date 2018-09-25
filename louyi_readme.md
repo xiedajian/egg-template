@@ -37,14 +37,15 @@ app.model.sync();
 
 ## sequelize 多表查询
 
-
+1. 定义模型时使用 associate 关联其他模型
+2. 查询时，在 include 中多表联查
 
 
 
 ## CORS 处理跨域
 
 *ajax跨域的时候不会携带cookie，需要客户端和服务端都设置一些东西*
-
+egg-cors 内置插件来设置
 
 
 ## redis缓存数据
@@ -126,8 +127,11 @@ vue + wangEditor 在实现后台文章编辑
 
 
 ## 发邮件
+
 nodemailer发邮件
+
 可参考 bin/nodemailer.js 案例
+
 
 
 ## 微信授权
