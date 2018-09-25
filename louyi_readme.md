@@ -119,6 +119,11 @@ vue + wangEditor 在实现后台文章编辑
 用到 egg-cors 设置cors
 
 
+## 导出 Excel 文件
+
+1. 使用 excel.js 生成 excel 文件
+2. 下载保存到本地
+
 
 ## 发邮件
 nodemailer发邮件
