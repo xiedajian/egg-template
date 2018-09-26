@@ -56,4 +56,12 @@ module.exports = app => {
 	// 接口API
 	router.get('/api', controller.api.index.index);
 	router.get('/api/search/', controller.api.douyin.search);
+
+	/**
+	 * 微信
+	 */
+	router.get('/wx/index/', controller.wx.index.checkSignature);
+	router.get('/wx/token/', controller.wx.index.checkSignature);
+
+
 };
