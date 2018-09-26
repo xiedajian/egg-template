@@ -1,4 +1,11 @@
 'use strict'
+
+
+const appData = require('../data.json')
+const seller = appData.seller
+const goods = appData.goods
+const ratings = appData.ratings
+
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
